@@ -5,6 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                powershell 'Write-Output "Hello, World!"'
+                powershell returnStatus: true, script: '.\\script.ps1'
             }
         }
         stage('Test') {
