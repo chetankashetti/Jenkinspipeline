@@ -11,6 +11,9 @@ pipeline {
         }
         stage('Test') {
             steps {
+                script {
+                    p4 status
+                }
                 echo 'Testing..'
             }
         }
