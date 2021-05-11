@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory = $false)]
-    [string] $var1
+    [string] $isProduction
 )
-Write-Output $var1
+Write-Output $isProduction
 Write-Output "Hey, I am in poweshell script!"
