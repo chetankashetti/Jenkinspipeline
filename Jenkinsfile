@@ -10,7 +10,7 @@ pipeline {
                     echo "${lastSuccessBuildNumber}"
                 }
                 powershell 'Write-Output "Hello, World!"'
-                powershell returnStatus: true, script: ".\\script.ps1 -var1 ${params.param}"
+                powershell returnStatus: true, script: '.\\script.ps1 -isProduction ($ENV:IsProduction -eq "true")'
             }
         }
         stage('Test') {
